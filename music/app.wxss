@@ -1,0 +1,6 @@
+@import "/static/iconfont/inconfont.wxss";
+
+page{
+  height: 100%;
+  background-color: #fff;
+}

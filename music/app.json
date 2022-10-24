@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "songPackage/pages/recommendSong/recommendSong",
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/video/video",
+    "pages/login/login",
+    "songPackage/pages/songDetail/songDetail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "万易云音乐"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "static/tabs/tab-home.png",
+        "selectedIconPath": "static/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "static/tabs/select.png",
+        "selectedIconPath": "static/tabs/selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "static/tabs/tab-my.png",
+        "selectedIconPath": "static/tabs/tab-my-current.png"
+      }
+    ]
+  }
+}

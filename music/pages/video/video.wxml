@@ -1,0 +1,54 @@
+<!--pages/video/video.wxml-->
+<view class="videoContainer">
+    <!-- 头部区域 -->
+    <view class="head">
+        <image src="/static/images/video/video.jpg" />
+        <view class="search">搜索音乐</view>
+        <image src="/static/images/logo.png" />
+    </view>
+    <!-- 滚动导航区域 -->
+    <scroll-view class="navScroll" scroll-x enable-flex>
+        <view class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
+            <view class="navContent {{navId === item.id ? 'active' : ''}}" bindtap="changeNav" data-id="{{item.id}}">{{item.name}}</view>
+        </view>
+    </scroll-view>
+    <!-- 视频滚动区域 -->
+    <scroll-view class="videoScroll" scroll-y>
+        <!-- 视频部分 -->
+        <view class="videoItem" wx:for="{{videoList}}" wx:key="{{id}}">
+            <video 
+                class="common"
+                src="{{item.data.urlInfo.url}}" 
+                poster="{{item.data.coverUrl}}"
+                object-fit="cover"
+                id="{{item.data.vid}}"
+                wx:if="{{videoId === item.data.vid}}"
+                bindplay="handlePlay"
+                bindtimeupdate="handleTimeOutUpdate"
+                bindended="handleEnded"
+                >
+            </video>
+            <image wx:else class="common" src="{{item.data.coverUrl}}" bindtap="handlePlay" id="{{item.data.vid}}"/>
+            <view class="content"></view>
+            <!-- 视频底部 -->
+            <view class="footer">
+                <image src="{{item.data.creator.avatarUrl}}"  class="avatar"/>
+                <text class="nickName">{{item.data.creator.nickname}}</text>
+                <!-- 底部右侧点赞评论 -->
+                <view class="comments_praised">
+                    <text class="item">
+                        <text class="iconfont icon-dianzan"></text>
+                        <text class="count">{{item.data.praisedCount}}</text>
+                    </text>
+                    <text class="item">
+                        <text class="iconfont icon-pinglun"></text>
+                        <text class="count">{{item.data.commentCount}}</text>
+                    </text>
+                    <button class="item btn">
+                        <text class="iconfont icon-gengduo-shuxiang"></text>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

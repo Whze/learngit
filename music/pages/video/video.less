@@ -1,0 +1,114 @@
+.videoContainer {
+
+    .head {
+        display: flex;
+        padding: 10rpx;
+        image {
+            width: 60rpx;
+            height: 60rpx;
+        }
+        .search {
+            font-size: 26rpx;
+            text-align: center;
+            line-height: 60rpx;
+            color: #d43c33;
+            border: 1rpx solid #eee;
+            margin: 0 20rpx;
+            flex: 1;
+        }
+    }
+}
+
+.navScroll {
+    height: 60rpx;
+    display: flex;
+    white-space: nowrap;
+    .navItem {
+        height: 60rpx;
+        font-size: 28rpx;
+        line-height: 60rpx;
+        padding: 0 30rpx;
+
+        .navContent {
+            height: 60rpx;
+            box-sizing: border-box;
+        }
+
+        .active {
+            border-bottom: 1rpx solid #d43c33;
+        }
+    }
+}
+.videoScroll {
+    height: calc(100vh - 152rpx);
+    margin-top: 10rpx;
+
+    .videoItem {
+        padding: 0 3%;
+
+        .common {
+            width: 300rpx;
+            height: 225rpx;
+            line-height: 0;
+            overflow: hidden;
+            display: inline-block;
+            position: relative;
+            z-index: 0;
+        }
+
+        .content {
+            height: 80rpx;
+            font-size: 26rpx;
+            line-height: 80rpx;
+            overflow: hidden;
+            max-width: 500rpx;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .footer {
+            border-top: 1rpx solid #eee;
+            padding: 20rpx 0;
+
+            .avatar {
+                width: 60rpx;
+                height: 60rpx;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+
+            .nickName {
+                font-size: 26rpx;
+                vertical-align: middle;
+                margin-left: 20rpx;
+            }
+
+            .comments_praised {
+                float: right;
+
+                .item {
+                    margin-left: 50rpx;
+                    position: relative;
+
+                    .iconfont {
+
+                    }
+
+                    .count {
+                        font-size: 20rpx;
+                        position: absolute;
+                        top: -20rpx;
+                    }
+                }
+
+                .btn {
+                    display: inline;
+                    padding: 0;
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,93 @@
+.videoContainer .head {
+  display: flex;
+  padding: 10rpx;
+}
+.videoContainer .head image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.videoContainer .head .search {
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #d43c33;
+  border: 1rpx solid #eee;
+  margin: 0 20rpx;
+  flex: 1;
+}
+.navScroll {
+  height: 60rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.navScroll .navItem {
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+}
+.navScroll .navItem .navContent {
+  height: 60rpx;
+  box-sizing: border-box;
+}
+.navScroll .navItem .active {
+  border-bottom: 1rpx solid #d43c33;
+}
+.videoScroll {
+  height: calc(100vh - 152rpx);
+  margin-top: 10rpx;
+}
+.videoScroll .videoItem {
+  padding: 0 3%;
+}
+.videoScroll .videoItem .common {
+  width: 300rpx;
+  height: 225rpx;
+  line-height: 0;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+.videoScroll .videoItem .content {
+  height: 80rpx;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  max-width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.videoScroll .videoItem .footer {
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+.videoScroll .videoItem .footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.videoScroll .videoItem .footer .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+.videoScroll .videoItem .footer .comments_praised {
+  float: right;
+}
+.videoScroll .videoItem .footer .comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+.videoScroll .videoItem .footer .comments_praised .item .count {
+  font-size: 20rpx;
+  position: absolute;
+  top: -20rpx;
+}
+.videoScroll .videoItem .footer .comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
